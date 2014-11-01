@@ -39,4 +39,4 @@ to completed application
 * bower install
 * grunt
 
-Then browse to
+Then browse to http://localhost:3000/
