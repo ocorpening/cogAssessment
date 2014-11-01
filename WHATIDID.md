@@ -15,17 +15,17 @@ character counts. The counts include all strings entered by all users of the sys
 
 * There is a single view with the input field and a button to update the display of the character counts.
 
-*I initially scaffolded the app with:
+* I initially scaffolded the app with:
 yo meanjs
 
-*Then I did npm install, bower install, and grunt.
+* Then I did npm install, bower install, and grunt.
 
-*Then I added crud for the charCount:
+* Then I added crud for the charCount:
 yo meanjs:crud-module charCount
 
-*Then I initialized git repo.
+* Then I initialized git repo.
 
-*The db requires this table to exist, issue this command in the mongo shell:
+* The db requires this table to exist, issue this command in the mongo shell:
 db.createCollection("chartrackers")
 
 TODO: styling, unit tests
