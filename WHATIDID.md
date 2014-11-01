@@ -32,3 +32,11 @@ TODO: styling, unit tests
 
 There is much boilerplate I did not write: perhaps comparing checkins can show my progress as I went from boilerplate
 to completed application
+
+## To run the application:
+* clone it
+* npm install
+* bower install
+* grunt
+
+Then browse to
