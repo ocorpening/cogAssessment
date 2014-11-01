@@ -6,14 +6,10 @@ module.exports = function(app) {
 
 	// Chartrackers Routes
 	app.route('/chartrackers')
-		.get(chartrackers.list)
-		.post(users.requiresLogin, chartrackers.create);
+		.get(chartrackers.list);
 
 	app.route('/chartrackers/:chartrackerId')
 		.get(chartrackers.read)
-		.put(chartrackers.update)
-		.delete(chartrackers.delete);
+		.put(chartrackers.update);
 
-	// Finish by binding the Chartracker middleware
-//	app.param('chartrackerId', chartrackers.chartrackerByID);
 };

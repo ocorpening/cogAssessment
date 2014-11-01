@@ -47,20 +47,26 @@
 <body class="ng-cloak">
 	<!--Application JavaScript Files-->
 	{% for jsFile in jsFiles %}<script type="text/javascript" src="{{jsFile}}"></script>
-	{% endfor %} 
+	{% endfor %}
 
 	{% if process.env.NODE_ENV === 'development' %}
 	<!--Livereload script rendered -->
 	<script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
 
 	{% endif %}
-    <div class="textEntry">
-        <form ng-submit="putText()" ng-controller="ChartrackersController">
-            Press enter to submit.
-            Please type in some characters: <input type="text" ng-keyup="appendShape()" data-ng-model="theInput"><br>
-        </form>
+    <div class="container">
+        <h1>Cognitive Scale Assessment</h1>
+        <div class="textEntry">
+            <form ng-submit="putText()" ng-controller="ChartrackersController">
+                Press enter to submit.
+                Please type in some characters: <input class="inputBox form-control" type="text" ng-keyup="appendShape($event)" data-ng-model="theInput"><br><br>
+            </form>
+        </div>
+        <button ng-click="getCurrentCharCounts()" ng-controller="ChartrackersController">
+            Get current character counts
+        </button>
+        <div class="putTable"></div>
     </div>
-
 </body>
 
 </html>

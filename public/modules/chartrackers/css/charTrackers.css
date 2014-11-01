@@ -12,3 +12,15 @@
     color: yellow;
     background-color: yellow;
 }
+
+table, th, td {
+    border: 1px solid black;
+}
+
+td {
+    padding: 15px;
+}
+
+body {
+    background: #FFCCCC;
+}
