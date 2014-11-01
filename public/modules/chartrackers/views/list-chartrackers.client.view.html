@@ -1,0 +1,19 @@
+<section data-ng-controller="ChartrackersController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Chartrackers</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="chartracker in chartrackers" data-ng-href="#!/chartrackers/{{chartracker._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="chartracker.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="chartracker.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="chartracker.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!chartrackers.$resolved || chartrackers.length">
+    	No Chartrackers yet, why don't you <a href="/#!/chartrackers/create">create one</a>?
+    </div>
+</section>
